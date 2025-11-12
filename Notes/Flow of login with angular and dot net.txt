@@ -1,0 +1,41 @@
+🖼 Angular ↔ .NET JWT Login Flow Diagram (Text Version)
+
+[User] 
+   |
+   | 1. Opens Login Page
+   v
+[Angular LoginComponent] 
+   | 
+   | 2. User enters username/password → Click "Login"
+   v
+[AuthService.login()] 
+   | 
+   | 3. Sends POST request to API: /api/auth/login
+   |    Body: { username, password }
+   v
+[.NET Backend - AuthController] 
+   | 
+   | 4. Validates credentials (DB or hardcoded)
+   | 5. If valid, creates JWT token
+   v
+[JWT Token Generated]
+   |
+   | 6. Returns { token: "eyJhbGci..." } to Angular
+   v
+[Angular LoginComponent]
+   |
+   | 7. AuthService stores JWT in localStorage / cookie
+   | 8. Redirects user to protected route (Dashboard)
+   v
+[Angular DashboardComponent] 
+   | (Protected by AuthGuard)
+   | 
+   | 9. AuthInterceptor attaches JWT to all HTTP requests
+   v
+[.NET Backend - Protected API] 
+   |
+   | 10. Middleware validates JWT
+   | 11. If valid → request succeeds
+   | 12. If invalid/expired → returns 401 Unauthorized
+   v
+[Angular Dashboard] displays API data

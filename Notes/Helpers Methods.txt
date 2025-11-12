@@ -1,0 +1,39 @@
+WHAT IS HELPER METHODS :
+
+- Helper Methods wo chhoti-chhoti functions hoti hain jo code ke andar common repetitive tasks ko simplify karne ke liye banai jaati hain.
+- Ye basically reusable utility methods hoti hain jo aap multiple jagah pe use kar sakte ho.
+- c A Helper Method is a reusable function designed to perform a specific task that assists or “helps” the main code logic — making the code cleaner, modular, and more maintainable.
+- helper methods are reusable utility fuction which makes our code cleaner and modular.
+- In ASP.NET Core, we commonly use HTML Helpers and Tag Helpers to generate UI elements dynamically. We can also create our own custom helper methods for tasks like formatting, 
+  logging, or validation.
+- Ye mostly static hote hain aur project ke multiple areas me use kiye ja sakte hain — jaise controllers, services, ya views.
+
+-eg :- 
+
+public static string Dateformat(Datetime date, string format = "dd-MM-yyyy")
+{
+	return date.Tostring(format);
+}
+
+var res =  Dateformat(DateTime.Now);
+
+TYPES OF HELPER METHODS
+
+1. html helper methods :
+
+- Html helpers are c# methods that generate a Html string.
+- they are Typically accessed through the @Html object in Razor views
+- a method to generate html elements dynamically.
+- it is also used in mvc 5 
+eg
+@Html.TextBox(), @Html.CheckBox(), @Html.ActionLink(), @Html.BeginForm() 
+@Html.TextBoxFor(model => model.UserName)
+@Html.LabelFor(model => model.Password)
+
+
+2. Tag Helpers (ASP.NET Core):
+
+- This is the new feature was introduced in dot net core  that enables server-side code to participate in creating and rendering HTML elements in razor files.
+- They look and feel like  standard html tag but have special attributes that trigger server-side logic.
+eg 
+<input asp-for="PropertyName">,<a asp-action="ActionName">

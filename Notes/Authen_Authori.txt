@@ -1,0 +1,19 @@
+🔐 Authentication
+
+Authentication is the process of verifying the identity of a user or system. It answers the question: "Who are you?"
+
+When a user logs into an application, they typically provide credentials—like a username and password, or a token. The system checks these credentials against a trusted source (like a database or identity provider) to confirm that the user is who they claim to be.
+
+In C#, especially in ASP.NET Core, authentication is often handled using middleware that validates tokens (like JWT), cookies, or external providers (like Google or Microsoft accounts). Once authenticated, the system creates a security context for the user, which can be used throughout the session.
+🛡️ Authorization
+
+Authorization is the process of determining whether an authenticated user has permission to perform a specific action or access a particular resource. It answers the question: "What are you allowed to do?"
+
+Once a user is authenticated, the system checks their roles, claims, or policies to decide if they can access certain endpoints, features, or data. For example, a user might be authenticated but not authorized to view admin reports or modify sensitive records.
+
+In C#, authorization is typically implemented using attributes like [Authorize], role checks, or custom policies. It works hand-in-hand with authentication but comes into play only after the user’s identity has been confirmed.
+Summary in Theory
+
+Authentication is about identity—proving who you are. Authorization is about access—deciding what you can do once your identity is known.
+
+Both are essential for application security, but they serve very different purposes. Authentication always comes first; authorization follows.

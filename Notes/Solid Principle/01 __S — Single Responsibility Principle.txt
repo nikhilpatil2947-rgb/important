@@ -1,0 +1,81 @@
+S — Single Responsibility Principle
+
+“A class should have only one reason to change.” — Robert C. Martin (Uncle Bob)
+
+🔎 Meaning
+
+Every class/module should do only one job.
+
+If a class has multiple responsibilities, changes in one responsibility can break or affect the other.
+
+Keeping one responsibility per class makes code easier to understand, maintain, and extend.
+
+-----------------------------------------------------------------------------
+
+❌ Bad Example (violates SRP)
+
+public class Invoice
+{
+    public void CalculateTotal() 
+    {
+        // Business logic
+    }
+
+    public void SaveToDatabase() 
+    {
+        // Data access logic
+    }
+
+    public void PrintInvoice() 
+    {
+        // Printing logic
+    }
+}
+
+Here:
+
+The Invoice class is responsible for:
+
+Business logic (calculating total)
+
+Persistence (saving to DB)
+
+Presentation (printing)
+
+🚨 It has more than one reason to change:
+
+If calculation rules change → modify class.
+
+If database technology changes → modify class.
+
+If printing format changes → modify class.
+
+This violates SRP.
+
+✅ Good Example (follows SRP)
+
+Split responsibilities into separate classes:
+
+public class Invoice
+{
+    public void CalculateTotal() 
+    {
+        // Business logic
+    }
+}
+
+public class InvoiceRepository
+{
+    public void Save(Invoice invoice) 
+    {
+        // Data access logic
+    }
+}
+
+public class InvoicePrinter
+{
+    public void Print(Invoice invoice) 
+    {
+        // Printing logic
+    }
+}

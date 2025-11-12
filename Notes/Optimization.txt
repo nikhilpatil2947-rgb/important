@@ -1,0 +1,11 @@
+🧠 Pro Tip: How to Think Like a Coder
+
+When optimizing:
+
+    Ask yourself: Can I avoid unnecessary work?
+
+    Look for patterns: Is the array already sorted? Can I skip comparisons?
+
+    Use flags or conditions: Track changes to decide whether to continue.
+
+    Measure impact: Does it improve best case, average case, or worst case?

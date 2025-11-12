@@ -1,0 +1,16 @@
+🧩 What Is the Interface Segregation Principle?
+
+The Interface Segregation Principle states:
+
+    "Clients should not be forced to depend on interfaces they do not use."
+In simpler terms, it means that a class should not be required to implement methods it doesn’t need. Instead of having one large, all-encompassing interface, you should split it into smaller, more specific ones.
+
+🛠️ Why It Matters
+
+    Avoids bloated interfaces: Large interfaces often contain methods irrelevant to some classes.
+
+    Improves code clarity: Classes only implement what they actually use.
+
+    Enhances flexibility: Easier to change or extend behavior without affecting unrelated parts.
+
+    Reduces coupling: Classes are less dependent on unnecessary functionality.

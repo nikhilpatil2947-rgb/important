@@ -1,0 +1,36 @@
+explanation of JWT (JSON Web Token) handling in .NET Core technology, covering the concepts, setup, token generation, validation, and securing APIs step-by-step.
+
+
+What is JWT?
+
+JWT is a compact, URL-safe token format used to securely transmit information between parties as a JSON object. It is widely used for authentication and authorization in 
+web applications and APIs.
+
+-----------------------------------------
+
+Why use JWT in .NET Core?
+
+    Stateless authentication: No need to store session info on the server.
+    Scalable: Tokens are self-contained and can be validated without database lookups.
+    Secure: Tokens are signed to prevent tampering.
+    Cross-platform: Works well with SPAs, mobile apps, and microservices.
+
+----------------------------------------
+
+What is JWT used for?
+
+    Authentication: After a user logs in, the server generates a JWT and sends it to the client. The client stores the token (usually in localStorage or cookies) and sends it with every subsequent request. 
+    The server verifies the token to authenticate the user.
+    Information Exchange: JWTs can securely transmit information between parties because they can be signed, ensuring the data is trustworthy.
+
+----------------------------------------
+
+Token Validation Flow
+
+When a request hits a protected endpoint:
+
+    The JWT middleware extracts the token from the Authorization header.
+    Validates the token signature using the secret key.
+    Checks token expiration and other claims.
+    If valid, sets the user principal in the request context.
+    If invalid or missing, returns 401 Unauthorized.

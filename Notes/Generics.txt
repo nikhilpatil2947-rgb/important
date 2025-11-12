@@ -1,0 +1,19 @@
+🔷 What Are Generics in C#?
+
+Generics allow you to create reusable, type-safe code without specifying a concrete data type up front.
+🔸 Definition:
+
+    Generics enable you to define classes, methods, interfaces, and delegates with a placeholder for the data type.
+
+-------------------------------------------------------------------
+
+🧠 Real-World Analogy
+
+Socho tumhare paas ek dabba (box) hai. Tum usme kuch bhi daal sakte ho — books, clothes, toys. Waise hi, generic class ek dabba hai jisme tum koi bhi data type daal sakte ho — int, string, float, etc.
+
+🔧 Why Use Generics?
+Benefit	Explanation
+✅ Type Safety	Compile-time checking of types
+✅ Reusability	Same code for multiple data types
+✅ Performance	Avoids boxing/unboxing
+✅ Flexibility	Works with collections, delegates, etc.

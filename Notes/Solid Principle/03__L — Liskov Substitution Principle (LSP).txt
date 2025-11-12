@@ -1,0 +1,78 @@
+🧠 Liskov Substitution Principle (LSP) — Explained
+
+Definition:
+
+    Objects of a superclass should be replaceable with objects of its subclasses without altering the correctness of the program.
+	
+In simpler terms: If class B inherits from class A, then objects of type B should behave like objects of type A — without breaking functionality or throwing unexpected errors.
+
+
+🚫 Bad Example — Violates LSP
+
+public class Bird
+{
+    public virtual void Fly()
+    {
+        Console.WriteLine("Bird is flying");
+    }
+}
+
+public class Ostrich : Bird
+{
+    public override void Fly()
+    {
+        throw new NotSupportedException("Ostrich can't fly");
+    }
+}
+
+
+❌ Why This Is Wrong:
+
+    The base class Bird assumes all birds can fly.
+
+    Ostrich inherits from Bird but throws an exception in Fly().
+
+    This breaks the contract of the base class and violates LSP.
+
+    If client code uses Bird and substitutes it with Ostrich, it will crash — which defeats the purpose of polymorphism.
+	
+✅ Correct Design — Follows LSP
+
+public abstract class Bird
+{
+    public abstract void Move();
+}
+
+public interface IFlyingBird
+{
+    void Fly();
+}
+
+public class Sparrow : Bird, IFlyingBird
+{
+    public override void Move() => Fly();
+    public void Fly() => Console.WriteLine("Sparrow flies");
+}
+
+public class Ostrich : Bird
+{
+    public override void Move() => Console.WriteLine("Ostrich runs");
+}
+
+✅ Why This Works:
+
+    We’ve separated flying behavior into its own interface IFlyingBird.
+
+    Bird now only defines a general movement contract.
+
+    Sparrow implements flying behavior, Ostrich does not — no broken expectations.
+
+    This design adheres to LSP and also respects Interface Segregation Principle (ISP).
+	
+🧠 Interview Tip:
+
+If asked about LSP, you can say:
+
+    “LSP ensures that derived classes honor the behavior promised by their base classes. If a subclass breaks that behavior — for example, by throwing exceptions where the base class expects 
+	 functionality — it violates LSP. I avoid this by designing abstractions carefully and using interfaces to model optional capabilities.”
+

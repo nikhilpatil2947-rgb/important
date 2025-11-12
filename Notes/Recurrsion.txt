@@ -1,0 +1,19 @@
+🔍 Real-Life Example: 📞 Customer Support Call
+
+Socho tum customer care ko call karte ho:
+
+    Tumhara call ek agent ke paas jaata hai.
+
+    Agar agent busy hai, toh tumhara call next agent ko forward hota hai.
+
+    Ye process tab tak repeat hota hai jab tak koi free agent milta hai.
+
+    Jaise hi free agent milta hai, tumhara issue solve hota hai aur sab calls wapas close hone lagte hain.
+
+🧠 Mapping to Recursion:
+
+Real-Life Step				Recursion Concept
+Call agent				Function call
+Agent busy → forward call		Recursive call
+Free agent mil gaya			Base case (stop condition)
+Call close hona start			Return from recursion

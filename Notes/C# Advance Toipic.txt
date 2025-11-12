@@ -1,0 +1,17 @@
+
+ðOther Advanced C# Interview Concepts
+
+Here are some more topics that often come up in senior-level interviews:
+
+Concept	           			Description								Example
+Delegates & Events		Type-safe function pointers				Action, Func, event
+LINQ					Query syntax for collections			var result = list.Where(x => x > 10);
+Async/Await				Asynchronous programming				await Task.Delay(1000);
+Generics				Type-safe reusable code					List<T>, Func<T, TResult>
+Reflection				Inspect metadata at runtime				typeof(MyClass).GetProperties()
+Dependency Injection	Loose coupling via abstractions			services.AddScoped<IMyService, MyService>()
+Nullable Reference 		Avoid null reference exceptions			string? name = null;
+Types	
+Span<T> / Memory<T>		High-performance memory access			Span<byte> buffer = stackalloc byte[256];
+Records					Immutable data models					record Person(string Name, int Age);
+Pattern Matching		Smart type checks						if (obj is Person p && p.Age > 18)

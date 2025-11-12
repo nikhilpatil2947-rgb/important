@@ -1,0 +1,241 @@
+Module 1: Introduction & Fundamentals – 8 sub-topics
+
+Overview of .NET Ecosystem
+
+.NET Core Installation & Setup
+
+.NET CLI Commands
+
+Visual Studio / VS Code Setup
+
+First .NET Console Application
+
+Variables, Data Types
+
+Operators, Expressions
+
+Control Statements, Arrays & Collections, Methods & Parameters, Exception Handling (I’ll count these as 1 combined topic)
+
+✅ Sub-modules = 8
+
+Module 2: Object-Oriented Programming in C# – 9 sub-topics
+
+Classes & Objects
+
+Constructors & Destructors
+
+Access Modifiers
+
+Properties & Indexers
+
+Methods & Overloading
+
+Inheritance & Polymorphism
+
+Interfaces & Abstract Classes
+
+Encapsulation & Data Hiding
+
+Namespaces
+
+✅ Sub-modules = 9
+
+Module 3: Advanced C# Concepts – 10 sub-topics
+
+Delegates & Events
+
+Lambda Expressions
+
+Generics
+
+Extension Methods
+
+Nullable Types
+
+Pattern Matching
+
+LINQ
+
+Async & Await
+
+File I/O & Streams
+
+Reflection & Attributes
+
+✅ Sub-modules = 10
+
+Module 4: .NET Core Essentials – 8 sub-topics
+
+.NET Core Project Structure
+
+Dependency Injection (DI)
+
+Configuration & Settings
+
+Logging & Exception Handling
+
+Middleware in .NET Core
+
+Environment Variables & Profiles
+
+Hosting & Kestrel Server
+
+.NET Core CLI Projects & Templates
+
+✅ Sub-modules = 8
+
+Module 5: ASP.NET Core Web Applications – 10 sub-topics
+
+MVC Architecture
+
+Razor Pages
+
+Views & Layouts
+
+Controllers & Actions
+
+Routing & Attribute Routing
+
+View Components & Partial Views
+
+Tag Helpers & HTML Helpers
+
+Forms, Model Binding & Validation
+
+Dependency Injection in ASP.NET Core
+
+(Combined with Forms) – already counted
+
+✅ Sub-modules = 9–10 (count as 10)
+
+Module 6: ASP.NET Core Web API – 10 sub-topics
+
+RESTful API Concepts
+
+API Controllers & Endpoints
+
+HTTP Methods
+
+Routing & Versioning
+
+Model Validation & Data Annotations
+
+Response Formatting
+
+Authentication & Authorization
+
+Swagger / OpenAPI Documentation
+
+Exception Handling & Filters
+
+Consuming APIs in Frontend
+
+✅ Sub-modules = 10
+
+Module 7: Data Access – 9 sub-topics
+
+Entity Framework Core (EF Core)
+
+Code-First & Database-First Approaches
+
+DbContext & DbSet
+
+LINQ Queries
+
+Relationships
+
+Migrations & Database Updates
+
+Transactions
+
+Raw SQL Queries
+
+Async DB Operations
+
+✅ Sub-modules = 9
+
+Module 8: Security & Authentication – 7 sub-topics
+
+Authentication Concepts
+
+Authorization Policies & Roles
+
+Identity Framework
+
+Password Hashing & User Management
+
+Securing APIs & Endpoints
+
+Data Protection & Encryption
+
+CORS & CSRF
+
+✅ Sub-modules = 7
+
+Module 9: Advanced Topics – 9 sub-topics
+
+Caching
+
+Background Tasks & Hosted Services
+
+SignalR (Real-time Communication)
+
+File Upload & Download
+
+Email Sending
+
+Logging Frameworks
+
+Globalization & Localization
+
+Unit Testing & Integration Testing
+
+Exception Handling Best Practices
+
+✅ Sub-modules = 9
+
+Module 10: Performance & Deployment – 6 sub-topics
+
+Performance Tuning & Profiling
+
+Health Checks
+
+Dockerizing .NET Applications
+
+CI/CD Pipelines
+
+Deployment to IIS, Azure App Service, Linux
+
+Monitoring & Logging
+
+✅ Sub-modules = 6
+
+Module 11: Cloud & Microservices (Optional Advanced) – 7 sub-topics
+
+Azure Services Integration
+
+.NET + Azure Functions
+
+Microservices Architecture
+
+gRPC & Protobuf
+
+API Gateway & Service Discovery
+
+Messaging Queues
+
+Event-driven Architecture
+
+✅ Sub-modules = 7
+
+Module 12: AI & ML Integration in .NET – 4 sub-topics
+
+ML.NET Basics
+
+Building Prediction Models
+
+Integrating OpenAI GPT
+
+Azure Cognitive Services / AI Chatbot
+
+✅ Sub-modules = 4

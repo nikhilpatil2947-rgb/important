@@ -1,0 +1,87 @@
+🔹 What is async?
+
+    async is a keyword used to declare a function that operates asynchronously.
+
+    An async function always returns a Promise, even if it returns a non-promise value.
+
+Syntax :
+JS : 
+async function myFunction() {
+  return "Hello";
+}
+myFunction().then(console.log); // Output: Hello
+
+
+----------------------------------------------------------------
+
+
+🔹 What is await?
+
+    await is used inside an async function to pause execution until a Promise is resolved or rejected.
+
+    It makes asynchronous code look and behave like synchronous code.
+
+    Syntax:JS
+	async function fetchData() {
+  	const response = await fetch("https://api.example.com/data");
+	const data = await response.json();
+	console.log(data);
+	}
+
+
+---------------------------------------------------------------
+
+
+🧠 What Are async and await in C#?
+🔹 async Keyword
+
+    Marks a method as asynchronous.
+
+    Allows the use of await inside the method.
+
+    The method must return one of the following:
+
+        Task
+
+        Task<T>
+
+        ValueTask
+
+        void (only for event handlers)
+
+🔹 await Keyword
+
+    Pauses the execution of the method until the awaited Task completes.
+
+    Frees up the calling thread to do other work (non-blocking).
+
+    Resumes execution after the awaited task finishes.
+
+
+public async Task<string> GetDataAsync()
+{
+    await Task.Delay(1000); // Simulates async work
+    return "Data loaded";
+}
+
+Calling this method:
+
+string result = await GetDataAsync();
+Console.WriteLine(result);
+
+
+
+Example in ASP.NET Core:
+
+public async Task<IActionResult> GetUser(int id)
+{
+    var user = await _userService.GetUserByIdAsync(id);
+    return Ok(user);
+}
+
+
+----------------------------------------------------
+
+what is idisposible
+
+
