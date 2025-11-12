@@ -1,0 +1,14 @@
+D:\NikhilP_Projects\All_Projects_Sln_and_Dbs\my_Project\Important\Custom_Helper\bin\Debug\net8.0\Custom_Helper.exe
+D:\NikhilP_Projects\All_Projects_Sln_and_Dbs\my_Project\Important\Custom_Helper\bin\Debug\net8.0\Custom_Helper.deps.json
+D:\NikhilP_Projects\All_Projects_Sln_and_Dbs\my_Project\Important\Custom_Helper\bin\Debug\net8.0\Custom_Helper.runtimeconfig.json
+D:\NikhilP_Projects\All_Projects_Sln_and_Dbs\my_Project\Important\Custom_Helper\bin\Debug\net8.0\Custom_Helper.dll
+D:\NikhilP_Projects\All_Projects_Sln_and_Dbs\my_Project\Important\Custom_Helper\bin\Debug\net8.0\Custom_Helper.pdb
+D:\NikhilP_Projects\All_Projects_Sln_and_Dbs\my_Project\Important\Custom_Helper\obj\Debug\net8.0\Custom_Helper.GeneratedMSBuildEditorConfig.editorconfig
+D:\NikhilP_Projects\All_Projects_Sln_and_Dbs\my_Project\Important\Custom_Helper\obj\Debug\net8.0\Custom_Helper.AssemblyInfoInputs.cache
+D:\NikhilP_Projects\All_Projects_Sln_and_Dbs\my_Project\Important\Custom_Helper\obj\Debug\net8.0\Custom_Helper.AssemblyInfo.cs
+D:\NikhilP_Projects\All_Projects_Sln_and_Dbs\my_Project\Important\Custom_Helper\obj\Debug\net8.0\Custom_Helper.csproj.CoreCompileInputs.cache
+D:\NikhilP_Projects\All_Projects_Sln_and_Dbs\my_Project\Important\Custom_Helper\obj\Debug\net8.0\Custom_Helper.dll
+D:\NikhilP_Projects\All_Projects_Sln_and_Dbs\my_Project\Important\Custom_Helper\obj\Debug\net8.0\refint\Custom_Helper.dll
+D:\NikhilP_Projects\All_Projects_Sln_and_Dbs\my_Project\Important\Custom_Helper\obj\Debug\net8.0\Custom_Helper.pdb
+D:\NikhilP_Projects\All_Projects_Sln_and_Dbs\my_Project\Important\Custom_Helper\obj\Debug\net8.0\Custom_Helper.genruntimeconfig.cache
+D:\NikhilP_Projects\All_Projects_Sln_and_Dbs\my_Project\Important\Custom_Helper\obj\Debug\net8.0\ref\Custom_Helper.dll
