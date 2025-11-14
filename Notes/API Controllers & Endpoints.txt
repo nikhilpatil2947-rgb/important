@@ -1,0 +1,18 @@
+🔹 What is an API Controller?
+
+- API Controller = Class jisme API methods hote hain
+- it is an c# class that handles http requests and resturns http responses.
+- it henherits from controlerBase class
+- return a json data by default
+- uses [ApiController] attribute
+
+🔹 Why use [ApiController]?
+
+✔ Automatic Model Validation 
+If the incoming data is invalid → .NET Core automatically returns 400 Bad Request.
+
+✔ Automatic Parameter Binding
+You don’t need to write [FromBody], [FromQuery] every time.
+
+
+Endpoint = Specific URL + HTTP Method jiske through data aata jata hai / API ka specific address (URL + HTTP method) jise client call karta hai.

@@ -1,0 +1,95 @@
+🔹 Versioning :
+
+- API allows the server to mainatain the different version of the same api without breaking as existing cutomer.
+- ASP.NET Core har version ko separate metadata ke saath register karta hai.
+- ASP Dot net core versioning middleware extract the the version from the endpoint and register it into metadata (mine sentance)
+- ASP Dot net core versioning middleware reads the req version(URL/heder/query) and routes the req to corrresponsing controller/action 
+
+
+🔥 Real Life Example — Tumne GPay v2 install kiya
+
+Tumhara phone ab new API call karta hai
+
+Lekin kisi aur ke phone me old GPay version hai
+
+Woh abhi bhi old API call karta hai
+
+Both apps work smoothly →
+because backend is providing V1 + V2 together. 
+
+                       ┌────────────────────────┐
+                       │   HTTP Request Aaya    │
+                       └─────────────┬──────────┘
+                                     │
+                                     ▼
+                     ┌────────────────────────────────┐
+                     │ 1. Routing Middleware          │
+                     │    (URL pattern match karta)   │
+                     └─────────────┬──────────────────┘
+                                   │
+                      Route contains version placeholder?
+                       e.g. api/v{version}/products
+                                   │
+                    ┌──────────────┼──────────────┐
+                    │ Yes                          │ No
+                    ▼                              ▼
+         Extract "version" from URL        Proceed to next step,
+            Example: v2 → "2"              version may come from
+                                           header or query string
+                    │                              │
+                    ▼                              ▼
+         ┌─────────────────────────┐    ┌──────────────────────────┐
+         │ 2. API Versioning       │    │ Try Header/Query Reader  │
+         │    Middleware           │    └──────────────────────────┘
+         └─────────────┬──────────┘
+                       │
+                       ▼
+               ┌────────────────────────────────┐
+               │ Extract version from request   │
+               │ - URL (if present)             │
+               │ - OR Query: api-version=2      │
+               │ - OR Header: x-api-version:2   │
+               └────────────────────────────────┘
+                       │
+                       ▼
+              ┌──────────────────────────────────────
+              │ 3. Version Validation            	│
+              │   (Framework checks…)           	│
+              │  - Kya yeh version registered hai?  │
+              │  - Kya controller me ApiVersion()  	│
+              │    metadata hai?                    │
+              └─────────────────────────────────────┘
+                       │
+            ┌──────────┼─────────────────────┐
+            │ Valid Version                  │ Invalid / Missing
+            ▼                                 ▼
+ ┌────────────────────────┐        ┌──────────────────────────┐
+ │ Match controller/action │        │ Return 400 Bad Request   │
+ │ using version metadata  │        │ "Unsupported API Version"│
+ └───────────────┬────────┘        └──────────────────────────┘
+                 │
+                 ▼
+      ┌────────────────────────────┐
+      │ 4. Endpoint Selector       │
+      │   Right Controller Picked  │
+      │   Ex: ProductsV2Controller │
+      └──────────────┬────────────┘
+                     │
+                     ▼
+     ┌──────────────────────────────────┐
+     │ 5. Model Binding + Validation    │
+     │    Inputs bind hote hain         │
+     │    DataAnnotations validate      │
+     └──────────────┬──────────────────┘
+                    │
+                    ▼
+     ┌──────────────────────────────────┐
+     │ 6. Action Execution              │
+     │   e.g. ProductsV2Controller.Get  │
+     └──────────────┬──────────────────┘
+                    │
+                    ▼
+        ┌──────────────────────────────┐
+        │  7. Response Returned         │
+        │     (JSON of version 2)       │
+        └──────────────────────────────┘

@@ -1,0 +1,29 @@
+- REST is known for Representational State Transfer.
+- REST is a achitecture style to use crate an API.
+- RESTFul means which follows the REST principle.
+- RESTFul is a way to exchange data between client and server via http methods like (get,post,put,delete).
+
+REST has main principle
+1.statelessness
+- server does not need the state or session of client(Server ko client ki koi state (ya session) yaad nahi rakhni chahiye.)
+- each and every req is independent.
+🔹 Example:
+Har request ke header mein token ya user info bhejna.
+
+2.Client-server architecture 
+- client and server are clearly seperated.
+- client only send the data and server only return the data
+🔹 Example:
+Angular/React app → API call → .NET Core backend → Database.
+
+3.Uniform Interface
+- APIs must has to create in consistent way like same format,naming convention.
+🔹 Example:
+/api/products (list), /api/products/1 (single item).
+
+4.Standard http method
+- GET (Retrieve a resource or fetch data)
+- POST (create a new record)
+- PUT (Update an existing records completely)
+- PATCH (Update an existing record partially)
+- DELETE (DELETE records)
